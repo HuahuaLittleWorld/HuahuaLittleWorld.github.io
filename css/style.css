@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    /* 外边距宽度 */
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #262626;
+}
+
+#info {
+    color: #FFF;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", "Monaco", "Bitstream Vera Sans Mono", "monospace";
+    /* 字体设置 */
+    margin: 10px 10px 0;
+    padding: 8px;
+    /* 内边距宽度 */
+    background: #161616;
+    position: absolute;
+    z-index: 1;
+    /* 元素堆叠顺序设置，z轴 */
+}
+
+
+/* 音乐 */
+
+#audio_btn {
+    width: 40px;
+    height: 40px;
+    background-image: url(../image/music.png);
+    /* background-position: 100% 0%; */
+    background-size: contain;
+    position: fixed;
+    top: 0.1866666666666665rem;
+    right: 0.22rem;
+    z-index: 2222;
+}
+
+.rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+    -moz-animation: rotating 1.2s linear infinite;
+    -o-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+    from {
+        -webkit-transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes rotating {
+    from {
+        -moz-transform: rotate(0)
+    }
+    to {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+
+/* 背景图 */
+
+body {
+    background: #020509;
+    overflow: hidden;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+}
+
+.codrops-demos {
+    font-size: 0.8em;
+    text-align: center;
+    position: absolute;
+    z-index: 99;
+    width: 96%;
+}
+
+.codrops-demos a {
+    display: inline-block;
+    margin: 0.35em 0.1em;
+    padding: 0.5em 1.2em;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 2px;
+    font-size: 110%;
+    border: 2px solid transparent;
+    color: #fff;
+}
+
+.codrops-demos a:hover,
+.codrops-demos a.current-demo {
+    border-color: #383a3c;
+}
+
+
+/* 重置游戏面板 */
+
+li {
+    list-style-type: none;
+}
+
+#box {
+    position: relative;
+    width: 300px;
+    height: 10px;
+    margin: 0 auto;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes bling {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#score {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 130px;
+    color: rgb(248, 248, 248);
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 20;
+}
+
+#restart {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+}
+
+#restart p {
+    width: 640px;
+    height: 40px;
+    line-height: 20px;
+    margin: 140px auto;
+    color: #fff;
+}
+
+#restart p span {
+    display: block;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+#restart .p1 span {
+    color: red;
+    width: 285px;
+    text-align: center;
+}
+
+#restart .p2 span {
+    color: #5694a2;
+}
+
+#restart .p3 {
+    font-family: "楷体";
+    font-size: 22px;
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, .8);
+    color: #000;
+    font-weight: bolder;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#restart .p3:hover {
+    background: white;
+}

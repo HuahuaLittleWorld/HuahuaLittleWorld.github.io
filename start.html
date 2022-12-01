@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星辰征途</title>
+    <!--网页图标标志-->
+    <link rel="shortcut icon" href="./image/plane.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 游戏终止页面 -->
+    <div id="box">
+        <div id="score">0</div>
+        <div id="restart">
+            <p class="p1"><span>0</span></p>
+            <p class="p2"><span>Biugle</span></p>
+            <p class="p3">重新开始</p>
+        </div>
+    </div>
+
+    <!-- 游戏规则收缩框 -->
+    <div id="info" style="width:510px;overflow: hidden;">
+        <div id="title" style="height:40px;background-color: #020509;font-size: 30px;text-align: center;color: #ede9e9;font-family: 宋体;font-weight: 700;" onclick="onTileClick()">游戏规则</div>
+        <div id="content" style="height:280px;background-color: #06041e;transition: height 0.2s;font-size: 20px;color: #ede9e9;font-family: 宋体;font-weight: 700;">
+            <br>&thinsp; 开启星辰征途，去创造那属于你的浩瀚星河吧！<br><br> &thinsp; 使用 [A][W][D] 或 [&larr;][&uarr;][&rarr;]键：<br>&thinsp; 可控制舰艇向左、前进、右方向移动<br> &thinsp; 使用 [SPACE] 或 [K] ：<br>&thinsp; 可控制子弹发射<br><br> &thinsp; 如若被陨石撞击，则示征途结束，请小心驾驶(ಡωಡ)<br><br> &thinsp; ps：点击游戏规则/音符----可控制面板/音乐开、闭
+        </div>
+    </div>
+
+    <!-- 音乐播放按钮 -->
+    <div id="audio_btn" class="rotate">
+        <audio loop src="./sound/music.mp3" id="media" autoplay="autoplay" preload="auto"></audio>
+    </div>
+
+    <!-- 游戏页面 -->
+    <canvas id="canvas"></canvas>
+    <script src="./js/index.js"></script>
+
+</body>
+
+<!-- 音乐播放控件 -->
+<script>
+    var x = document.getElementById("media");
+    $(function() {
+        $("#audio_btn").click(function() {
+            $(this).toggleClass("rotate"); //控制音乐图标 自转或暂停
+
+            //控制背景音乐 播放或暂停
+            if ($(this).hasClass("rotate")) {
+                x.play(); //加载并播放音频、视频文件，除非文件已经暂停在其他位置，否则默认重头开始播放
+            } else {
+                x.pause(); //暂停处于播放状态的音频、视频文件
+            }
+        })
+    });
+</script>
+
+</html>
