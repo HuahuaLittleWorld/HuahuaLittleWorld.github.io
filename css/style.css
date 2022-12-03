@@ -30,7 +30,7 @@ canvas {
 #audio_btn {
     width: 40px;
     height: 40px;
-    background-image: url(../image/music.png);
+    background-image: url(/image/music.png);
     /* background-position: 100% 0%; */
     background-size: contain;
     position: fixed;
